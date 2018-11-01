@@ -1,0 +1,34 @@
+body {
+     border: 10px dotted red;
+     padding: 20px;
+}
+
+.Paragraph1 h1 {
+    font-variant: small-caps;
+    font-size: 30px;
+}
+
+.Paragraph1 p {
+  font-variant: small-caps;
+}
+
+.sidebar {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 200px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #999; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+    font-size: 50px;
+    color: #000;
+
+}
+
+.main {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
