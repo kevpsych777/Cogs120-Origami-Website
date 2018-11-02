@@ -1,0 +1,134 @@
+
+.Paragraph1 h1 {
+    font-variant: small-caps;
+    font-size: 30px;
+    text-align: center;
+    display: inline;
+}
+
+.Paragraph1 p {
+  font-variant: small-caps;
+}
+.topbar {
+    height: 75px; /* Full-height: remove this if you want "auto" height */
+    width: 100%; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: lightgray; /* Black */
+    overflow-y: hidden; /* Disable horizontal scroll */
+    font-size: 50px;
+}
+
+#homebutton {
+  margin: 20px 0 0 0;
+  display: inline;
+  border-radius: 50%;
+}
+
+#dragon {
+  padding-top: 10%;
+  float: left;
+}
+#dragonleftview {
+
+}
+#dragonrightview{
+
+}
+.information {
+
+    margin: 50px;
+    padding-left: 50px;
+    text-align: left;
+    float: right;
+    padding-top: 10%;
+}
+
+#test {
+  padding-right: 10%;
+}
+
+.testClass {
+  margin-right: 20px;
+  border-style: solid;
+  border-width: 1px;
+}
+
+#tableholder {
+  width: 100%;
+}
+
+#numberbar {
+  width: 100%;
+
+}
+.numberformat {
+  display: center;
+  border: 1px;
+  border-width: 1px;
+  border-style: solid;
+  width:10%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.videopush {
+  display: inline;
+  float:right;
+}
+
+.buttonpush {
+  display: inline;
+  float: right;
+  margin-left: 10px;
+  margin-top: 5%;
+  border-radius: 50%;
+}
+#padding{
+  height: 10%;
+  background-color: white;
+}
+
+.smallheading {
+  width: 50%;
+  padding-bottom: 50px;
+}
+
+.sidebar {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 200px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #999; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+    font-size: 50px;
+    color: #000;
+
+}
+
+.sidebar a {
+    margin-left: 20px;
+    padding: 0px 0px 10px 0px;
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+    display: block;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.main {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 60px;
+}
