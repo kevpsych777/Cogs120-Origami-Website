@@ -22,9 +22,11 @@
 }
 
 #homebutton {
-  margin: 20px 0 0 0;
+  margin: 10px 0 0 0;
   display: inline;
   border-radius: 50%;
+  font-size: 20px;
+
 }
 
 #dragon {
