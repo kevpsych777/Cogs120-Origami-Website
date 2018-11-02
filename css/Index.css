@@ -1,56 +1,133 @@
-}
 
-.Paragraph1 h1 {
-    font-variant: small-caps;
-    font-size: 30px;
-}
 
 .Paragraph1 p {
   font-variant: small-caps;
 }
 .topbar {
-    height: 100px; /* Full-height: remove this if you want "auto" height */
+    height: 80px; /* Full-height: remove this if you want "auto" height */
     width: 100%; /* Set the width of the sidebar */
     position: fixed; /* Fixed Sidebar (stay in place on scroll) */
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 0;
     background-color: lightgray; /* Black */
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 20px;
-    font-size: 50px;
+    overflow-y: hidden; /* Disable horizontal scroll */
+    padding-top: 0px;
+    font-size: 20px;
+    padding: 10px;
+}
+.top {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    font-size: 25px; /* Increased text to enable scrolling */
+    padding: 0px 60px;
+    font-variant: small-caps;
+
+}
+
+.top a{
+  text-decoration: none;
+  color: white;
+  display: inline;
+}
+.top a:hover {
+  color: #f1f1f1;
 }
 
 .sidebar {
     height: 100%; /* Full-height: remove this if you want "auto" height */
-    width: 200px; /* Set the width of the sidebar */
+    width: 13%; /* Set the width of the sidebar */
     position: fixed; /* Fixed Sidebar (stay in place on scroll) */
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 0;
     background-color: #999; /* Black */
     overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 20px;
+    padding-top: 90px;
     font-size: 50px;
     color: #000;
 
 }
 
 .sidebar a {
-    margin-left: 20px;
+    margin-left: 50px;
     padding: 0px 0px 10px 0px;
     text-decoration: none;
     font-size: 30px;
     color: white;
-    display: block;
+    display: inline;
 }
 
 .sidebar a:hover {
     color: #f1f1f1;
 }
 
+
 .main {
     margin-left: 160px; /* Same as the width of the sidenav */
     font-size: 28px; /* Increased text to enable scrolling */
-    padding: 0px 60px;
+    padding: 70px 60px;
+    height: 100%;
+    width: 100%;
+}
+
+div.gallery {
+    margin: 3%;
+    border: 1px solid #ccc;
+    float: left;
+    width: 200px;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: left;
+    font-size: 75%;
+}
+
+#sorting {
+  font-size: 40px;
+  text-decoration: underline;
+  margin: auto;
+}
+
+#tags {
+  font-size: 30px;
+  margin: 0px;
+}
+
+#table {
+  margin: 4px;
+  border: 1px solid#ccc;
+  float: left;
+  width: 1px;
+}
+
+#table:hover {
+  border: 1px solid #777;
+}
+
+#Difficulty {
+  font-size: 25px;
+  text-decoration: underline;
+  margin: auto;
+}
+
+#ETC {
+  font-size: 25px;
+  text-decoration: underline;
+  margin: auto;
+}
+
+.list {
+  list-style-type: circle;
+  font-size: 20px;
+  text-decoration: none;
 }
