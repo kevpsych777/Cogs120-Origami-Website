@@ -1,6 +1,3 @@
-body {
-     border: 10px dotted red;
-     padding: 20px;
 }
 
 .Paragraph1 h1 {
@@ -10,6 +7,18 @@ body {
 
 .Paragraph1 p {
   font-variant: small-caps;
+}
+.topbar {
+    height: 100px; /* Full-height: remove this if you want "auto" height */
+    width: 100%; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: lightgray; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+    font-size: 50px;
 }
 
 .sidebar {
@@ -27,8 +36,21 @@ body {
 
 }
 
+.sidebar a {
+    margin-left: 20px;
+    padding: 0px 0px 10px 0px;
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+    display: block;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
 .main {
     margin-left: 160px; /* Same as the width of the sidenav */
     font-size: 28px; /* Increased text to enable scrolling */
-    padding: 0px 10px;
+    padding: 0px 60px;
 }
