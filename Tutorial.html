@@ -1,168 +1,440 @@
-<html>
-  <head>
-    <title>
-      Origami Website
-    </title>
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<link href="css/tutorial.css" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+<!--
+<header id="header">
+  <img src="https://melbournechapter.net/images/color-clipart-black-and-white-8.png" alt="Origami Logo" height="60" id="header-img" align="middle" class="headerText">
+  <h3 class="headerText"> Folding @ Home</h3>
+  <form class="headerText formField" type="text">
+    <input>
+    </input>
+  <button class="round"> Go </button>
+  </form>
+  <nav id="nav-bar" class="headerText">
+    <a class="nav-link headerText" href="#home"> Home </a>
+    <a class="nav-link headerText" href="#explore"> Explore </a>
+    <a class="nav-link headerText" href="#saved"> Saved </a>
+    <a class="nav-link headerText" href="#login"> Login </a>
+  </nav>
+</header> -->
 
-    <link	href="css/tutorial.css"	rel="stylesheet"	/>
-  </head>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <header>
-    <div class="topbar">
-      <button id="homebutton"> <a href="Index.html"> Home Button </a> </button>
-    <div class="main">
-      <div class="Paragraph1">
-      <center>
-          <h1> Tutorial</h1>
-        </center>
+</head>
+<header class="menubar">
+  <div class="menubarbackground"> </div>
+  <a href="index.html" title="Folding @ Home">
+   <img src="https://melbournechapter.net/images/color-clipart-black-and-white-8.png" alt="Origami Logo" height="60" id="header-img" align="middle" class="headerText">
+    <h3 class="headerText"> Folding @ Home</h3>
+  </a>
+
+  <form class="headerText formField" type="text">
+    <input>
+    </input>
+    <button class="searchbutton"> Go </button>
+  </form>
+  <nav id="nav-bar" class="headerText">
+    <a class="nav-link headerText" href="#explore">
+      Explore </a>
+    <a class="nav-link headerText" id="savedmenubar" href="#saved">
+      Saved </a>
+    <!-- Login button -->
+    <button id="loginbutton" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+
+    <div id="id01" class="login-modal">
+
+      <form class="login-modal-content animate" action="/action_page.php">
+
+        <div class="login-container">
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+
+          <button id="loginbutton2" type="submit">Login</button>
+          <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+        </div>
+
+        <div class="login-container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+          <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+      </form>
+    </div>
+    <!-- Signup Button-->
+
+    <button id="signupbutton1" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Sign Up</button>
+
+    <div id="id02" class="signupModal">
+      <span onclick="document.getElementById('id02').style.display='none'" class="close2" title="Close signupModal">&times;</span>
+      <form class="signup-modal-content animate" action="/action_page.php">
+        <div class="signup-container">
+          <h1>Sign Up</h1>
+          <p>Please fill in this form to create an account.</p>
+          <hr>
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="email" required>
+
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+
+          <label for="psw-repeat"><b>Repeat Password</b></label>
+          <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+          <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+
+          <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+          <div class="clearfix2">
+            <button id="signupbutton2" type="submit" class="signupbtn">Sign Up</button>
+            <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn2">Cancel</button>
+
+          </div>
+        </div>
+      </form>
+    </div>
+  </nav>
+</header>
+
+<!--
+<nav id="navbar">
+  <img src="https://melbournechapter.net/images/color-clipart-black-and-white-8.png" id="logo">
+  <a href="#Last_Hits" class="nav-link"> Sort By:</a>
+  <a href="#Laning_and_Harass" class="nav-link">Tags</a>
+  <table class="tableTags">
+     <tr>
+       <th> <a> Pokemon </a> </th>
+    </tr>
+    <tr>
+       <th> <a>Flower </a> </th>
+    </tr>
+    <tr>
+      <th> <a>Animal </a> </th>
+    </tr>
+    </table>
+  <a href="#Pushing" class="nav-link">Rating</a>
+  <ul class="form">
+    <li class="rating">
+        <input type="radio" name="rating" value="1" /><span class="fas fa-star"></span>
+        <input type="radio" name="rating" value="2" /><span class="fas fa-star"></span>
+        <input type="radio" name="rating" value="3" /><span class="fas fa-star"></span>
+        <input type="radio" name="rating" value="4" /><span class="fas fa-star"></span>
+        <input type="radio" name="rating" value="5" /><span class="fas fa-star"></span>
+    </li>
+</ul>
+  <a href="#Hero_Selection" class="nav-link">Difficulty</a>
+<form>
+    <table>
+      <tr>
+        <th> <a> 1 </a> </th>
+        <th> <a> 2 </a> </th>
+        <th> <a> 3  </a> </th>
+        <th> <a> 4  </a> </th>
+        <th> <a> 5  </a> </th>
+      </tr>
+  </table>
+  </form>
+</nav>
+
+-->
+<!--Dragon Gallery Old
+<div id="myModal" class="gallery-modal">
+  <span class="close">&times;</span>
+  <img class="gallery-modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+<div id="mainInfo" class="borderTest">
+
+  <div id="gallery" class="borderTest">
+    <figure>
+      <img id="mainimg" src="https://i.ytimg.com/vi/FTrTUjwG6r4/maxresdefault.jpg" alt="Dragon" width="400px">
+      <figcaption>
+        <table>
+          <tr>
+            <a> <img src="https://i.ytimg.com/vi/FTrTUjwG6r4/maxresdefault.jpg" alt="there should be a smaller image here" width="200px" class="smallimg">
+        </a>
+            <a> <img src="https://i.ytimg.com/vi/FTrTUjwG6r4/maxresdefault.jpg" alt="there should be a smaller image here" width="200px" class="smallimg">
+        </a>
+            <a> <img src="https://i.ytimg.com/vi/FTrTUjwG6r4/maxresdefault.jpg" alt="there should be a smaller image here" width="200px" class="smallimg">
+        </a>
+          </tr>
+        </table>
+      </figcaption>
+    </figure>
+  </div>
+</div>
+-->
+<!-- Slideshow gallery-->
+<div class="slideshow-container">
+  <div class="overview-slides">
+    <div class="numbertext">1 / 4</div>
+    <img src="Pikachu Project/pikachuStep01.jpg" style="width:100%">
+  </div>
+
+  <div class="overview-slides">
+    <div class="numbertext">2 / 4</div>
+    <img src="Pikachu Project/pikachuStep04.jpg" style="width:100%">
+  </div>
+
+  <div class="overview-slides">
+    <div class="numbertext">3 / 4</div>
+    <img src="Pikachu Project/pikachuStep08.jpg" style="width:100%">
+  </div>
+
+  <div class="overview-slides">
+    <div class="numbertext">4 / 4</div>
+    <img src="Pikachu Project/pikachuStep11-2.jpg" style="width:100%">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption">Dragon!!!</p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="bottom-gallery cursor" src="Pikachu Project/pikachuStep01.jpg" style="width:100%" onclick="currentSlide(1)" alt="Pika 1">
+    </div>
+    <div class="column">
+      <img class="bottom-gallery cursor" src="Pikachu Project/pikachuStep04.jpg" style="width:100%" onclick="currentSlide(2)" alt="Pika 2">
+    </div>
+    <div class="column">
+      <img class="bottom-gallery cursor" src="Pikachu Project/pikachuStep08.jpg" style="width:100%" onclick="currentSlide(3)" alt="Pika 3">
+    </div>
+    <div class="column">
+      <img class="bottom-gallery cursor" src="Pikachu Project/pikachuStep11-2.jpg" style="width:100%" onclick="currentSlide(4)" alt="Pika 4">
     </div>
   </div>
 </div>
-  </header>
 
-  <body>
-      <img id ="dragon" src ="Dragon.jpg" width = "40%">
-      <table class="information" style="width:50%">
-        <tr id ="padding"></tr>
-        <tr>
-          <th class = "smallheading">Information</th>
-          <th class = "smallheading">Save</th>
-        </tr>
-        <tr>
-          <th class = "smallheading"> Difficulty Level</th>
-          <th class = "smallheading"> Average Rating</th>
-        </tr>
-        <tr>
-          <th class = "smallheading">Duration</th>
-          <th class = "smallheading">Paper requirement</th>
-
-        </tr>
-        <tr>
-          <th >Creator: Miyazaki27</th>
-
-        </tr>
-      </table>
-
-  <img id ="dragonleftview" src ="Dragon.jpg" width = "10%">
-  <img id ="dragontopview" src ="Dragon.jpg" width = "10%">
-  <img id ="dragonrightview" src ="Dragon.jpg" width = "10%">
-
-
-
-<br>
-<br>
-<br>
-<div id="tableholder">
-<table id="numberbar">
-      <th class = "numberformat"><a class = "clearFormat" href="#stepOne">1</a></th>
-      <th class = "numberformat"><a href="#stepTwo">2</a></th>
-      <th class = "numberformat"><a href="#stepThree">3</a></th>
-      <th class = "numberformat"><a href="#stepFour">4</a></th>
-      <th class = "numberformat"><a href="#stepFive">5</a></th>
-      <th class = "numberformat"><a href="#stepSix">6</a></th>
-      <th class = "numberformat"><a href="#stepSeven">7</a></th>
-      <th class = "numberformat"><a href="#stepEight">8</a></th>
-      <th class = "numberformat"><a href="#stepNine">9</a></th>
-      <th class = "numberformat"><a href="#stepTen">10</a></th>
+<div id="info" class="borderTest">
+  <table id="origamiInfo">
+    <tr>
+      <th> Name: </th>
+      <th> Difficulty: </th>
+    </tr>
+    <tr>
+      <th> Creator: </th>
+      <th> Estimated Time: </th>
+    </tr>
+    <tr>
+      <th> Stuff </th>
+      <th> Stuff </th>
+    </tr>
   </table>
+</div>
+</div>
+
+<div id="numberNav" class="borderTest">
+  <table id="navTable">
+    <tr>
+      <th class="numbersteps"> <a href="#step1"> 1 </a> </th>
+      <th class="numbersteps"> <a href="#step1"> 2 </a> </th>
+      <th class="numbersteps"> <a href="#step1"> 3 </a> </th>
+      <th class="numbersteps"> <a href="#step1"> 4 </a> </th>
+      <th class="numbersteps"> <a href="#step1"> 5 </a> </th>
+      <th class="numbersteps"> <a href="#step1"> 6 </a> </th>
+      <th class="numbersteps"> <a href="#step1"> 7 </a> </th>
+      <th class="numbersteps"> <a href="#step1"> 8 </a> </th>
+      <th class="numbersteps"> <a href="#step1"> 9 </a> </th>
+      <th class="numbersteps"> <a href="#step1"> 10 </a> </th>
+    </tr>
+  </table>
+</div>
+
+<div id="mainSteps" class="borderTest">
+  <div id="step1" class="borderTest align">
+    <h1> STEP ONE </h1>
+    <h2> There will be instructions here </h2>
+    <table>
+      <tr>
+        <th> <img src="Pikachu Project/pikachuStep01.jpg" class="stepImg" alt="Pika Step 1" width="400px"> </th>
+      </tr>
+    </table>
+    <button class="round" id="help"> ? </button>
+    <!iframe src="" id="video"><!/iframe>
   </div>
-<! use breakline to make spaces in you paragraphs>
-    <div class="main">
-      <!--
-      <p> This is a Paragraph with breakline (br)
-        <br>what will happen if i type in separate lines
-        like this ???
-        </br>
-      </p>
-
-
-    <h1> This is a header
-      what will happen if i type in separate lines
-      like this ???
-    </h1>
-    -->
-<div id="stepOne">
-    <h2> Step 1 </h2>
-    <button class="buttonpush"> ? </button>
-    <iframe src="" title="Step One" class="videopush"> Step 1 </iframe>
-    <img src="" alt="Why is there no photo here?"> </img>
-    <img src="" alt="Why is there no photo here?"> </img>
-      <h4> There will be text steps here </h4>
-</div>
-<div id="stepTwo">
-    <h2> Step 2 </h2>
-    <button class="buttonpush"> ? </button>
-    <iframe src="" title="Step Two" class="videopush"> Step 2 </iframe>
-    <img src="" alt="Why is there no photo here?"> </img>
-    <img src="" alt="Why is there no photo here?"> </img>
-      <h4> There will be text steps here </h4>
-</div>
-<div id="stepThree">
-    <h2> Step 3 </h2>
-    <button class="buttonpush"> ? </button>
-    <iframe src="" title="Step Two" class="videopush"> Step 3 </iframe>
-    <img src="" alt="Why is there no photo here?"> </img>
-    <img src="" alt="Why is there no photo here?"> </img>
-      <h4> There will be text steps here </h4>
-</div>
-<div id="stepFour">
-    <h2> Step 4 </h2>
-    <button class="buttonpush"> ? </button>
-    <iframe src="" title="Step Two" class="videopush"> Step 4 </iframe>
-    <img src="" alt="Why is there no photo here?"> </img>
-    <img src="" alt="Why is there no photo here?"> </img>
-      <h4> There will be text steps here </h4>
-</div>
-<div id="stepFive">
-    <h2> Step 5 </h2>
-    <button class="buttonpush"> ? </button>
-    <iframe src="" title="Step Two" class="videopush"> Step 5 </iframe>
-    <img src="" alt="Why is there no photo here?"> </img>
-    <img src="" alt="Why is there no photo here?"> </img>
-      <h4> There will be text steps here </h4>
-</div>
-<div id="stepSix">
-    <h2> Step 6 </h2>
-    <button class="buttonpush"> ? </button>
-    <iframe src="" title="Step Two" class="videopush"> Step 6 </iframe>
-    <img src="" alt="Why is there no photo here?"> </img>
-    <img src="" alt="Why is there no photo here?"> </img>
-      <h4> There will be text steps here </h4>
-</div>
-<div id="stepSeven">
-    <h2> Step 7 </h2>
-    <button class="buttonpush"> ? </button>
-    <iframe src="" title="Step Two" class="videopush"> Step 7 </iframe>
-    <img src="" alt="Why is there no photo here?"> </img>
-    <img src="" alt="Why is there no photo here?"> </img>
-      <h4> There will be text steps here </h4>
-</div>
-<div id="stepEight">
-    <h2> Step 8 </h2>
-    <button class="buttonpush"> ? </button>
-    <iframe src="" title="Step Two" class="videopush"> Step 8 </iframe>
-    <img src="" alt="Why is there no photo here?"> </img>
-    <img src="" alt="Why is there no photo here?"> </img>
-      <h4> There will be text steps here </h4>
-</div>
-<div id="stepNine">
-    <h2> Step 9 </h2>
-    <button class="buttonpush"> ? </button>
-    <iframe src="" title="Step Two" class="videopush"> Step 9 </iframe>
-    <img src="" alt="Why is there no photo here?"> </img>
-    <img src="" alt="Why is there no photo here?"> </img>
-      <h4> There will be text steps here </h4>
-</div>
-<div id="stepTen">
-    <h2> Step 10 </h2>
-    <button class="buttonpush"> ? </button>
-    <iframe src="" title="Step Two" class="videopush"> Step 10 </iframe>
-    <img src="" alt="Why is there no photo here?"> </img>
-    <img src="" alt="Why is there no photo here?"> </img>
-      <h4> There will be text steps here </h4>
-</div>
-
+  <hr class="star-bright" id="nameline"></hr>
+  <div id="step2" class="borderTest align">
+    <h1> STEP TWO </h1>
+    <h2> There will be instructions here </h2>
+    <table>
+      <tr>
+        <th> <img src="Pikachu Project/pikachuStep02.jpg" class="stepImg" alt="Pika Step 2a" width="400px"> </th>
+        <th> <img src="Pikachu Project/pikachuStep02-2.jpg" class="stepImg" alt="Pika Step 2b" width="400px"> </th>
+      </tr>
+    </table>
+    <button class="round" id="help"> ? </button>
+    <!iframe src="" id="video"><!/iframe>
+  </div>
+  <hr class="star-bright" id="nameline"></hr>
+  <div id="step3" class="borderTest align">
+    <h1> STEP THREE </h1>
+    <h2> There will be instructions here </h2>
+    <table>
+      <tr>
+        <th> <img src="Pikachu Project/pikachuStep03.jpg" class="stepImg" alt="Pika Step 3" width="400px"> </th>
+      </tr>
+    </table>
+    <button class="round" id="help"> ? </button>
+    <!iframe src="" id="video"><!/iframe>
+  </div>
+  <hr class="star-bright" id="nameline"></hr>
+  <div id="step4" class="borderTest align">
+    <h1> STEP FOUR </h1>
+    <h2> There will be instructions here </h2>
+    <table>
+      <tr>
+        <th> <img src="Pikachu Project/pikachuStep04.jpg" class="stepImg" alt="Pika Step 4" width="400px"> </th>
+      </tr>
+    </table>
+    <button class="round" id="help"> ? </button>
+    <!iframe src="" id="video"><!/iframe>
+  </div>
+  <hr class="star-bright" id="nameline"></hr>
+  <div id="step5" class="borderTest align">
+    <h1> STEP FIVE </h1>
+    <h2> There will be instructions here </h2>
+    <table>
+      <tr>
+        <th> <img src="Pikachu Project/pikachuStep05.jpg" class="stepImg" alt="Pika Step 5a" width="400px"> </th>
+        <th> <img src="Pikachu Project/pikachuStep05-2.jpg" class="stepImg" alt="Pika Step 5b" width="400px"> </th>
+        <th> <img src="Pikachu Project/pikachuStep05-3.jpg" class="stepImg" alt="Pika Step 5c" width="400px"> </th>
+      </tr>
+    </table>
+    <button class="round" id="help"> ? </button>
+    <!iframe src="" id="video"><!/iframe>
+  </div>
+  <hr class="star-bright" id="nameline"></hr>
+  <div id="step6" class="borderTest align">
+    <h1> STEP SIX </h1>
+    <h2> There will be instructions here </h2>
+    <table>
+      <tr>
+        <th> <img src="Pikachu Project/pikachuStep06.jpg" class="stepImg" alt="Pika Step 6a" width="400px"> </th>
+        <th> <img src="Pikachu Project/pikachuStep06-2.jpg" class="stepImg" alt="Pika Step 6b" width="400px"> </th>
+        <th> <img src="Pikachu Project/pikachuStep06-3.jpg" class="stepImg" alt="Pika Step 6c" width="400px"> </th>
+      </tr>
+    </table>
+    <button class="round" id="help"> ? </button>
+    <!iframe src="" id="video"><!/iframe>
+  </div>
+  <hr class="star-bright" id="nameline"></hr>
+  <div id="step7" class="borderTest align">
+    <h1> STEP SEVEN </h1>
+    <h2> There will be instructions here </h2>
+    <table>
+      <tr>
+        <th> <img src="Pikachu Project/pikachuStep07.jpg" class="stepImg" alt="Pika Step 7" width="400px"> </th>
+      </tr>
+    </table>
+    <button class="round" id="help"> ? </button>
+    <!iframe src="" id="video"><!/iframe>
+  </div>
+  <hr class="star-bright" id="nameline"></hr>
+  <div id="step8" class="borderTest align">
+    <h1> STEP EIGHT </h1>
+    <h2> There will be instructions here </h2>
+    <table>
+      <tr>
+        <th> <img src="Pikachu Project/pikachuStep08.jpg" class="stepImg" alt="Pika Step 8" width="400px"> </th>
+      </tr>
+    </table>
+    <button class="round" id="help"> ? </button>
+    <!iframe src="" id="video"><!/iframe>
+  </div>
+  <hr class="star-bright" id="nameline"></hr>
+  <div id="step9" class="borderTest align">
+    <h1> STEP NINE </h1>
+    <h2> There will be instructions here </h2>
+    <table>
+      <tr>
+        <th> <img src="Pikachu Project/pikachuStep09.jpg" class="stepImg" alt="Pika Step 9" width="400px"> </th>
+      </tr>
+    </table>
+    <button class="round" id="help"> ? </button>
+    <!iframe src="" id="video"><!/iframe>
+  </div>
+  <hr class="star-bright" id="nameline"></hr>
+  <div id="step10" class="borderTest align">
+    <h1> STEP TEN </h1>
+    <h2> There will be instructions here </h2>
+    <table>
+      <tr>
+        <th> <img src="Pikachu Project/pikachuStep10.jpg" class="stepImg" alt="Pika Step 10a" width="400px"> </th>
+        <th> <img src="Pikachu Project/pikachuStep10-2.jpg" class="stepImg" alt="Pika Step 10b" width="400px"> </th>
+      </tr>
+    </table>
+    <button class="round" id="help"> ? </button>
+    <!iframe src="" id="video"><!/iframe>
+  </div>
+  <hr class="star-bright" id="nameline"></hr>
+  <div id="step10" class="borderTest align">
+    <h1> STEP TEN </h1>
+    <h2> There will be instructions here </h2>
+    <table>
+      <tr>
+        <th> <img src="Pikachu Project/pikachuStep11.jpg" class="stepImg" alt="Pika Step 11a" width="400px"> </th>
+        <th> <img src="Pikachu Project/pikachuStep11-2.jpg" class="stepImg" alt="Pika Step 11a" width="400px"> </th>
+      </tr>
+    </table>
+    <button class="round" id="help"> ? </button>
+    <!iframe src="" id="video"><!/iframe>
   </div>
 
-  </body>
+</div>
+<script>
+//Login button Javascript
+var loginModal = document.getElementById('id01');
+
+// Login: When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == loginModal) {     loginModal.style.display = "none";
+    }
+}
+
+// Signup Button Modal
+var signupModal = document.getElementById('id02');
+
+// Signup: When the user clicks anywhere outside of the modal, close it
+
+
+//Slide show gallery
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("overview-slides");
+  var dots = document.getElementsByClassName("bottom-gallery");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
 </html>

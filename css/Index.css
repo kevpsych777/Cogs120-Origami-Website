@@ -1,97 +1,155 @@
-
+html {
+  font-family: Montserrat;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  text-decoration: none;
+  color: black;
+}
+a:focus {
+  text-decoration: none;
+  color: black;
+}
+a:hover,
+a:active {
+  text-decoration: none;
+  color: black;
+}
 
 .Paragraph1 p {
   font-variant: small-caps;
 }
-.topbar {
-    height: 80px; /* Full-height: remove this if you want "auto" height */
-    width: 100%; /* Set the width of the sidebar */
-    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
-    left: 0;
-    background-color: lightgray; /* Black */
-    overflow-y: hidden; /* Disable horizontal scroll */
-    padding-top: 0px;
-    font-size: 20px;
-    padding: 10px;
+.headerText {
+  display: inline;
+  padding-left: 1.04%; /*~20px for a 1920x1080*/
+  top: 0.5%;
+  font-size: 14pt;
 }
-.top {
-    margin-left: 160px; /* Same as the width of the sidenav */
-    font-size: 25px; /* Increased text to enable scrolling */
-    padding: 0px 60px;
-    font-variant: small-caps;
-
+.menubar {
+  position: fixed;
+  width: 100%;
+}
+.formField {
+  /*styling for the search input bar*/
+  padding-left: 25%;
+}
+.nav-link {
+  padding-left: 2%;
+  display: inline;
+}
+.menubarbackground {
+  background-color: lightgray;
+  position: fixed;
+  height: 10%; /* Full-height: remove this if you want "auto" height */
+  width: 100%; /* Set the width of the sidebar */
+  top: 0; /* Stay at the top */
+  left: 0;
+  z-index: -10;
+}
+.searchbutton {
+  background-color: #fff;
+  border-width: 1px;
+  font-family: Montserrat;
+}
+.homepagebutton {
+  margin-left: 1%; /* Same as the width of the sidenav */
+  font-variant: small-caps;
+  border: 1px;
+  border-style: dotted;
+  width: 10%;
+  height: 100%;
 }
 
-.top a{
+.homepagebutton a {
+  font-size: 200%;
   text-decoration: none;
   color: white;
   display: inline;
 }
-.top a:hover {
+.homepagebutton a:hover {
   color: #f1f1f1;
 }
 
 .sidebar {
-    height: 100%; /* Full-height: remove this if you want "auto" height */
-    width: 13%; /* Set the width of the sidebar */
-    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
-    left: 0;
-    background-color: #999; /* Black */
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 90px;
-    font-size: 50px;
-    color: #000;
-
+  height: auto; /* Full-height: remove this if you want "auto" height */
+  width: 15%; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 10%; /* Stay at the top */
+  left: 0;
+  background-color: #999; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  overflow-y: scroll; /* Disable horizontal scroll */
+  color: #000;
 }
 
 .sidebar a {
-    margin-left: 50px;
-    padding: 0px 0px 10px 0px;
-    text-decoration: none;
-    font-size: 30px;
-    color: white;
-    display: inline;
+  /*Adjusts the main sidebar tab*/
+  margin-left: 6.67%;
+  padding: 0px 0px 10px 0px;
+  text-decoration: none;
+  font-size: 40px;
+  color: white;
+  display: inline;
 }
 
 .sidebar a:hover {
-    color: #f1f1f1;
+  color: #f1f1f1;
 }
 
-
-.main {
-    margin-left: 160px; /* Same as the width of the sidenav */
-    font-size: 28px; /* Increased text to enable scrolling */
-    padding: 70px 60px;
-    height: 100%;
-    width: 100%;
+.recommended {
+  margin-left: 20%; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding-top: 45px;
+  height: 100%;
+  width: 75%;
+  border: 1px solid;
+  overflow-x: hidden; /* Disable horizontal scroll */
+}
+.recent {
+  margin-left: 20%; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding-top: 20px;
+  height: 100%;
+  width: 75%;
+  border: 1px solid;
+  overflow-x: hidden; /* Disable horizontal scroll */
 }
 
-div.gallery {
-    margin: 3%;
-    border: 1px solid #ccc;
-    float: left;
-    width: 200px;
+.gallery {
+  margin: 4%;
+  border: 3px solid #ccc;
+  float: left;
+  height: 25%;
+  width: 20%;
 }
 
-div.gallery:hover {
-    border: 1px solid #777;
+.gallery:hover {
+  border: 3px solid #777;
 }
 
-div.gallery img {
-    width: 100%;
-    height: auto;
+.gallery img {
+  width: 100%;
+  height: auto;
 }
 
-div.desc {
-    padding: 15px;
-    text-align: left;
-    font-size: 75%;
+.desc {
+  border: 1px solid #777;
+  padding: 15px;
+  text-align: left;
+  font-size: 60%;
 }
 
+#header-img {
+  padding-bottom: 1.5%;
+}
 #sorting {
   font-size: 40px;
   text-decoration: underline;
@@ -101,6 +159,11 @@ div.desc {
 #tags {
   font-size: 30px;
   margin: 0px;
+}
+
+#listStyle {
+  margin: 5px;
+  float: none;
 }
 
 #table {
@@ -114,7 +177,7 @@ div.desc {
   border: 1px solid #777;
 }
 
-#Difficulty {
+#difficulty {
   font-size: 25px;
   text-decoration: underline;
   margin: auto;
@@ -127,16 +190,317 @@ div.desc {
 }
 
 .list {
-  list-style-type: circle;
+  list-style-type: none;
   font-size: 20px;
   text-decoration: none;
-}
-
-#buttonTags {
-  background-color: inherit;
 }
 
 #buttonList {
   background-color: inherit;
   font-size: 20px;
+}
+
+
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 14px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+#loginbutton {
+    background-color: #49d049;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    top: 0px;
+    z-index:2;
+    display: inline;
+    font-family: Montserrat;
+    font-size: 14pt;
+
+}
+
+#loginbutton:hover {
+    background-color: #4CAF50;
+
+}
+#loginbutton2 {
+    background-color: #49d049;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    top: 0px;
+    z-index:2;
+    display: inline;
+    font-family: Montserrat;
+    font-size: 14pt;
+
+}
+
+#loginbutton2:hover {
+    background-color: #4CAF50;
+
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+.zoom {
+    transition: transform .5s;
+}
+
+.zoom:hover {
+    -ms-transform: scale(1.3); /* IE 9 */
+    -webkit-transform: scale(1.3); /* Safari 3-8 */
+    transform: scale(1.3);
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+/* Sign up button
+Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Set a style for all buttons */
+#signupbutton1 {
+    background-color: #49d049;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    font-family: Montserrat;
+    font-size: 14pt;
+}
+
+#signupbutton1:hover {
+     background-color:#4CAF50;
+}
+#signupbutton2 {
+    background-color: #49d049;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-family: Montserrat;
+    font-size: 14pt;
+}
+
+#signupbutton2:hover {
+     background-color:#4CAF50;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn2 {
+    padding: 14px 20px;
+    background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn2, .signupbtn2 {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container2 {
+    padding: 16px;
+}
+
+/* The Modal (background) */
+.modal2 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: #474e5d;
+    padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content2 {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+}
+
+
+/* The Close Button (x) */
+.close2 {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+}
+
+.close2:hover,
+.close2:focus {
+    color: #f44336;
+    cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix2::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+}
+/* css for filter tags */
+.container {
+  overflow:hidden;
+}
+
+.filterDiv {
+  color: Black;
+  display: none;
+}
+
+.show{
+  display: block;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: Black;
 }

@@ -1,136 +1,677 @@
-
-.Paragraph1 h1 {
-    font-variant: small-caps;
-    font-size: 30px;
-    text-align: center;
-    display: inline;
+html {
+  font-family: Montserrat;
 }
-
-.Paragraph1 p {
-  font-variant: small-caps;
-}
-.topbar {
-    height: 75px; /* Full-height: remove this if you want "auto" height */
-    width: 100%; /* Set the width of the sidebar */
-    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
-    left: 0;
-    background-color: lightgray; /* Black */
-    overflow-y: hidden; /* Disable horizontal scroll */
-    font-size: 50px;
-}
-
-#homebutton {
-  margin: 10px 0 0 0;
+.headerText {
   display: inline;
-  border-radius: 50%;
-  font-size: 20px;
+  padding-left: 1%; /*~20px for a 1920x1080*/
+  top: 0.5%;
+  font-size: 14pt;
+  z-index: 2;
+}
+.menubar {
+  position: fixed;
+  width: 100%;
+  z-index:2;
 
 }
+.formField {
+  /*styling for the search input bar*/
+  padding-left: 40%;
+  z-index:2;
 
-#dragon {
-  padding-top: 10%;
+}
+.nav-link {
+  padding-left: 1%;
+  display: inline;
+  z-index:2;
+}
+.menubarbackground {
+  background-color: lightgray;
+  position: fixed;
+  height: 10%; /* Full-height: remove this if you want "auto" height */
+  width: 100%; /* Set the width of the sidebar */
+  top: 0; /* Stay at the top */
+  left: 0;
+  z-index: -1;
+}
+.searchbutton {
+  background-color: #fff;
+  border-width: 1px;
+  font-family: Montserrat;
+  z-index:2;
+}
+#savedmenubar {
+  padding-right: 20px;
+}
+
+.sidebar {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 15%; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 10%; /* Stay at the top */
+  left: 0;
+  background-color: #999; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  overflow-y: hidden; /* Disable horizontal scroll */
+  color: #000;
+}
+
+header {
+  width: 100%;
+  background-color: #fff;
+  color: #000;
+}
+#loginbutton {
+  background-color: #49d049;
+  color: white;
+  padding: 12px 18px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  top: 0px;
+  z-index: 3;
+  display: inline;
+  font-family: Montserrat;
+  font-size: 14pt;
+}
+
+#loginbutton:hover {
+  background-color: #4caf50;
+}
+#loginbutton2 {
+  background-color: #49d049;
+  color: white;
+  padding: 12px 18px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  top: 0px;
+  z-index: 3;
+  display: inline;
+  font-family: Montserrat;
+  font-size: 14pt;
+}
+
+#loginbutton2:hover {
+  background-color: #4caf50;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+.login-container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.login-modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 3; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow-y: hidden;
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.login-modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s;
+}
+
+@-webkit-keyframes animatezoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes animatezoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+  .cancelbtn {
+    width: 100%;
+  }
+}
+/* Sign up button
+Full-width input fields */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* Add a background color when the inputs get focus */
+input[type="text"]:focus,
+input[type="password"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for all buttons */
+#signupbutton1 {
+  background-color: #49d049;
+  color: white;
+  padding: 12px 18px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-family: Montserrat;
+  font-size: 14pt;
+}
+
+#signupbutton1:hover {
+  background-color: #4caf50;
+}
+#signupbutton2 {
+  background-color: #49d049;
+  color: white;
+  padding: 12px 18px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-family: Montserrat;
+  font-size: 14pt;
+}
+
+#signupbutton2:hover {
+  background-color: #4caf50;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn2 {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn2,
+.signupbtn2 {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.signup-container {
+  padding: 16px;
+}
+
+/* The Modal (background) */
+.signupModal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 3; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow-y: hidden;
+  background-color: #474e5d;
+  padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.signup-modal-content {
+  background-color: #fefefe;
+  margin: 0% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close2 {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close2:hover,
+.close2:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix2::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn,
+  .signupbtn {
+    width: 100%;
+  }
+}
+
+a {
+  color: inherit;
+}
+
+
+.headerText {
+  display: inline-block;
+  padding-left: 20px;
+  z-index:2;
+}
+
+.smallimg {
+  padding-right: 20px;
+}
+
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+
+.borderTest {
+  border-style: none;
+  border-width: 1px;
+}
+/*old*/
+#navbar {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 5%; /* Set the width of the sidebar */
+  position: fixed;
+  \: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0; /* left justify */
+  background-color: #fff; /* Red */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+  color: #000;
+}
+.numbersteps {
+  width: 10%;
+}
+#navbar img{
+  width: 100%;
+}
+
+#mainimg {
+  padding-left: 15%;
+  z-index:2;
+}
+
+#mainInfo {
+  height: 100%;
+  width: 100%;
+  margin: auto;
+}
+
+#gallery {
+  width: 50%;
   float: left;
 }
-#dragonleftview {
 
-}
-#dragonrightview{
-
-}
-.information {
-
-    margin: 50px;
-    padding-left: 50px;
-    text-align: left;
-    float: right;
-    padding-top: 10%;
+#info {
+  float: right;
+  padding-right: 20%;
+  width: 50%;
 }
 
-#test {
+#origamiInfo {
+  text-align: left;
+  width: 70%;
+  border-style: none;
+  margin-top: 10%;
+}
+
+#mainInfo {
+  float: left;
+}
+
+#navTable th {
+  border-style: solid;
+  border-width: 1px;
+}
+
+#navTable {
+  width: 100%;
+}
+
+#video {
+  float: right;
+  margin-top: -8%;
+  margin-right: 5%;
+}
+#help {
+  float: right;
+  margin-right: 3%;
+  margin-top: -5%;
+  font-size: 1.5em;
+}
+
+.star-bright,
+hr.star-dark {
+  margin: 40px auto 30px;
+  padding: 0;
+  max-width: 80%;
+  border: 0;
+  border-top: solid 3px;
+  text-align: center;
+  color: #000;
+}
+
+.align {
+  padding-left: 10%;
+}
+
+.round {
+  border-radius: 50%;
+  background-color: #fff;
+  border-width: 0px;
+  font-family: Raleway;
+}
+
+.formField {
+  padding-left: 40%;
+}
+
+
+.centered {
+  text-align: center;
+  padding-top: 8%;
+}
+
+.pushup {
+  padding-top: 0%;
+}
+
+.featureCol {
+  display: table-cell;
+  width: 50%;
+  z-index: -1;
+  border-style: dashed;
+  border-width: 2px;
+}
+
+.featureCol figcaption {
+  margin-top: 4%;
+}
+
+.featuresTech {
   padding-right: 10%;
+  padding-left: 10%;
+  padding-top: 4%;
+  display: inline-block;
 }
 
-.testClass {
-  margin-right: 20px;
-  border-style: solid;
-  border-width: 1px;
+.featuresMain {
+  width: 33%;
+  display: inline-block;
 }
 
-#tableholder {
+.bumped {
+  display: inline-block;
+  marign-right: 20%;
+  margin-left: 20%;
+  padding-left: 1%;
+  padding-top: 4%;
+}
+
+#nav-bar {
+  width: 30%;
+  position: absolute;
+  right: 0px;
+
+}
+
+.features {
+  display: table;
+  margin: auto;
+  text-align: center;
+  width: 100%;
+  float: left;
+  padding-top: 3%;
+  padding-bottom: 10%;
+  z-index: -1;
+}
+
+#features p {
+  display: inline-block;
+}
+
+#featuresText {
   width: 100%;
 }
 
-#numberbar {
-  width: 100%;
-
+#descText {
+  display: flex;
+  width: 75%;
+  margin: auto 0 0 20%;
+  padding-bottom: 3%;
 }
-.numberformat {
-  display: center;
-  border: 1px;
-  border-width: 1px;
-  border-style: solid;
-  width:10%;
+
+#featuresText p {
+  display: inline-block;
+  marign-right: 20%;
+  margin-left: 20%;
+  padding-left: 1%;
+  padding-top: 4%;
+}
+
+#rawRuns {
+  margin: auto;
+  text-align: center;
+}
+
+#motionBoardshop {
+  height: 400px;
+  width: 400px;
+  position: relative;
+}
+
+#buyinfo {
+  padding-bottom: 10%;
 }
 
 a {
   text-decoration: none;
-  color: black;
 }
 
-.videopush {
-  display: inline;
-  float:right;
+@media (max-width: 600px) {
+  .featureCol {
+    width: 100%;
+  }
 }
 
-.buttonpush {
-  display: inline;
-  float: right;
-  margin-left: 10px;
-  margin-top: 5%;
-  border-radius: 50%;
-}
-#padding{
-  height: 10%;
-  background-color: white;
+/* PROTO STUFF */
+
+.tableTags {
+  font-size: 0.75em;
 }
 
-.smallheading {
+.rating input[type="radio"] {
+  position: absolute;
+  filter: alpha(opacity=0);
+  -moz-opacity: 0;
+  -khtml-opacity: 0;
+  opacity: 0;
+  cursor: pointer;
+  width: 17px;
+}
+
+.rating span {
+  width: 24px;
+  height: 16px;
+  line-height: 16px;
+  padding: 1px 22px 1px 0; /* 1px FireFox fix */
+  background: url(stars.png) no-repeat -22px 0;
+}
+
+.rating input[type="radio"]:checked + span {
+  background-position: -22px 0;
+}
+
+.rating input[type="radio"]:checked + span ~ span {
+  background-position: 0 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.slideshow-container {
+  position: relative;
   width: 50%;
-  padding-bottom: 50px;
+  top:100px;
+  z-index:1;
+  padding-left:50px;
 }
 
-.sidebar {
-    height: 100%; /* Full-height: remove this if you want "auto" height */
-    width: 200px; /* Set the width of the sidebar */
-    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
-    left: 0;
-    background-color: #999; /* Black */
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 20px;
-    font-size: 50px;
-    color: #000;
-
+/* Hide the images by default */
+.overview-slides {
+  display: none;
+  z-index:0;
 }
 
-.sidebar a {
-    margin-left: 20px;
-    padding: 0px 0px 10px 0px;
-    text-decoration: none;
-    font-size: 30px;
-    color: white;
-    display: block;
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
 }
 
-.sidebar a:hover {
-    color: #f1f1f1;
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+  background-color: gray;
 }
 
-.main {
-    margin-left: 160px; /* Same as the width of the sidenav */
-    font-size: 28px; /* Increased text to enable scrolling */
-    padding: 0px 60px;
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.bottom-gallery {
+  opacity: 0.6;
+}
+
+.active,
+.bottom-gallery:hover {
+  opacity: 1;
 }
