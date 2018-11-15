@@ -466,5 +466,26 @@ window.onclick = function(event) {
     }
 }
 // End of help button
+
+// Sticky Nav bar js
+window.onscroll = function() {myFunction() };
+var numberNav = document.getElementById("numberNav");
+var sticky = numberNav.offsetTop;
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    numberNav.classList.add("sticky")
+  } else {
+    numberNav.classList.remove("sticky");
+  }
+}
+
+//Scroll Bar for Steps
+//window.onscroll = function() {myFunction2() };
+function myFunction2() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("navTable").style.width = scrolled + "%";
+}
 </script>
 </html>

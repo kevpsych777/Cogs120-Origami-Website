@@ -399,6 +399,7 @@ a {
 
 #navTable {
   width: 100%;
+  background: #ccc;
 }
 
 #video {
@@ -410,10 +411,19 @@ a {
   float: right;
   margin-right: 3%;
   margin-top: -5%;
-  font-size: 1.5em;
+  font-size: 1.5px;
+}
+.sticky {
+  position: fixed;
+  top: 10%;
+  width: 100%;
 }
 
-.star-bright,
+.sticky + .content {
+  padding-top: 60px;
+}
+
+.star-bright
 hr.star-dark {
   margin: 40px auto 30px;
   padding: 0;
