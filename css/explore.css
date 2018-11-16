@@ -28,7 +28,7 @@ a:active {
 }
 .headerText {
     display: inline;
-    padding-left: 1%; /*~20px for a 1920x1080*/
+
     top: 0.5%;
     font-size: 14pt;
 }
@@ -52,6 +52,7 @@ a:active {
     top: 0; /* Stay at the top */
     left: 0;
     z-index: -10;
+    box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 }
 .searchbutton {
     background-color: #fff;
@@ -467,7 +468,7 @@ input[type=text]:focus, input[type=password]:focus {
 /*code for explore page*/
 /* Creates a centered show more box */
 .centershowmore {
-    margin-left: 20%;
+    margin-left: 18%;
     padding-top: 5%;
     height: 75%;
     width: 75%;
@@ -490,7 +491,7 @@ input[type=text]:focus, input[type=password]:focus {
 }
 
 .hiddencontent {
-    padding: 0 18px;
+    padding: 5px 18px;
     display: none;
     overflow: hidden;
     background-color: #f1f1f1;

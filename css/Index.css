@@ -28,7 +28,7 @@ a:active {
 }
 .headerText {
   display: inline;
-  padding-left: 1.04%; /*~20px for a 1920x1080*/
+
   top: 0.5%;
   font-size: 14pt;
 }
@@ -38,10 +38,10 @@ a:active {
 }
 .formField {
   /*styling for the search input bar*/
-  padding-left: 25%;
+  padding-left: 40%;
 }
 .nav-link {
-  padding-left: 2%;
+  padding-left: 1%;
   display: inline;
 }
 .menubarbackground {
@@ -52,11 +52,15 @@ a:active {
   top: 0; /* Stay at the top */
   left: 0;
   z-index: -10;
+  box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 }
 .searchbutton {
   background-color: #fff;
   border-width: 1px;
   font-family: Montserrat;
+}
+#savedmenubar {
+  padding-right: 20px;
 }
 .homepagebutton {
   margin-left: 1%; /* Same as the width of the sidenav */
@@ -107,7 +111,7 @@ a:active {
 .recommended {
   margin-left: 20%; /* Same as the width of the sidenav */
   font-size: 28px; /* Increased text to enable scrolling */
-  padding-top: 45px;
+  padding-top: 100px;
   height: 100%;
   width: 75%;
   border: 1px solid;
@@ -145,19 +149,20 @@ a:active {
   padding: 15px;
   text-align: left;
   font-size: 60%;
+  background-color: white;
 }
 
 #header-img {
   padding-bottom: 1.5%;
 }
 #sorting {
-  font-size: 40px;
+  font-size: 30px;
   text-decoration: underline;
   margin: auto;
 }
 
 #tags {
-  font-size: 30px;
+  font-size: 25px;
   margin: 0px;
 }
 
@@ -176,7 +181,11 @@ a:active {
 #table:hover {
   border: 1px solid #777;
 }
-
+#rating{
+    font-size: 25px;
+    text-decoration: underline;
+    margin: auto;
+}
 #difficulty {
   font-size: 25px;
   text-decoration: underline;
@@ -274,9 +283,11 @@ img.avatar {
 }
 
 .container {
-    padding: 16px;
+    padding: 40px 16px 0px 16px;
 }
-
+#recommended #recent{
+    padding-bottom: 0px;
+}
 span.psw {
     float: right;
     padding-top: 16px;

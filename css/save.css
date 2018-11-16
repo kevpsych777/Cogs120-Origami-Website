@@ -52,6 +52,7 @@ a:active {
     top: 0; /* Stay at the top */
     left: 0;
     z-index: -10;
+    box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 }
 .searchbutton {
     background-color: #fff;
@@ -494,6 +495,19 @@ input[type=text]:focus, input[type=password]:focus {
     display: none;
     overflow: hidden;
     background-color: #f1f1f1;
+}
+/* saved page code */
+.marginbodytext {
+    padding-top: 6%;
+    padding-left: 18%;
+    width: 75%;
+    height: 75%;
+}
+
+.cropped {
+    object-fit: cover;
+    border: 1px solid;
+    border-color: black;
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
