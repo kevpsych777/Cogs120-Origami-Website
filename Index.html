@@ -286,8 +286,9 @@
         <br> Duration: 25 min.
       </div>
     </div>
-
-
+ <!--top page button-->
+    <button onclick="topFunction()" id="toppagebtn"
+    title="Go to top">Top</button>
   </div>
 
 <script>
@@ -346,6 +347,21 @@ function searchFunction() {
   div = document.getElementById("myGallery");
   div = div.getElementsByTagName("")
 }
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
 
+function scrollFunction() {
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        document.getElementById("toppagebtn").style.display = "block";
+    } else {
+        document.getElementById("toppagebtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
 </script>
 </html>
