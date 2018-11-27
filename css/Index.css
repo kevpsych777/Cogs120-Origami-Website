@@ -1,6 +1,11 @@
 html {
   font-family: Montserrat;
 }
+
+body {
+    margin: 0;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -47,7 +52,7 @@ a:active {
 .menubarbackground {
   background-color: lightgray;
   position: fixed;
-  height: 10%; /* Full-height: remove this if you want "auto" height */
+  height: 70px; /* Full-height: remove this if you want "auto" height */
   width: 100%; /* Set the width of the sidebar */
   top: 0; /* Stay at the top */
   left: 0;
@@ -82,15 +87,15 @@ a:active {
 }
 
 .sidebar {
-  height: auto; /* Full-height: remove this if you want "auto" height */
-  width: 15%; /* Set the width of the sidebar */
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  z-index: 1; /* Stay on top */
-  top: 10%; /* Stay at the top */
+  height: 1600px; /* Full-height: remove this if you want "auto" height */
+  width: 200px; /* Set the width of the sidebar */
+  float: left;
+  z-index: 0; /* Stay on top */
+  margin-top: 5%; /* Stay at the top */
   left: 0;
   background-color: #999; /* Black */
   overflow-x: hidden; /* Disable horizontal scroll */
-  overflow-y: scroll; /* Disable horizontal scroll */
+  overflow-y: hidden; /* Disable horizontal scroll */
   color: #000;
 }
 
@@ -109,7 +114,10 @@ a:active {
 }
 
 .recommended {
-  margin-left: 20%; /* Same as the width of the sidenav */
+  /*margin-left: 20%;*/ /* Same as the width of the sidenav */
+  display: relative;
+  float: right;
+
   font-size: 28px; /* Increased text to enable scrolling */
   padding-top: 100px;
   height: 100%;
@@ -118,7 +126,8 @@ a:active {
   overflow-x: hidden; /* Disable horizontal scroll */
 }
 .recent {
-  margin-left: 20%; /* Same as the width of the sidenav */
+  /*margin-left: 20%;*/ /* Same as the width of the sidenav */
+  float: right;
   font-size: 28px; /* Increased text to enable scrolling */
   padding-top: 20px;
   height: 100%;
@@ -170,7 +179,7 @@ a:active {
   margin: 5px;
   float: none;
 }
-
+/* float buttons for tags*/
 #table {
   margin: 4px;
   border: 1px solid#ccc;

@@ -9,8 +9,9 @@
 <header class="menubar">
   <div class="menubarbackground"> </div>
   <a href="Index.html" title="Folding @ Home">
-   <img src="https://melbournechapter.net/images/color-clipart-black-and-white-8.png" alt="Origami Logo" height="60" id="header-img" align="middle" class="headerText" >
-    <h3 class="headerText"> Folding @ Home</h3>
+   <img src="https://melbournechapter.net/images/color-clipart-black-and-white-8.png"
+   alt="Origami Logo" height="60" id="header-img" align="middle" class="headerText" >
+  <h3 class="headerText"> Folding @ Home</h3>
   </a>
 
   <form class="headerText formField" type="text">
@@ -90,22 +91,22 @@
 <div>
 <div class="slideshow-container">
   <div class="overview-slides">
-    <div class="numbertext">1 / 4</div>
+    <div class="numbertext">1 / 4 <b> Overview</b></div>
     <img src="Pikachu Project/pikachuStep01.jpg" style="width:100%">
   </div>
 
   <div class="overview-slides">
-    <div class="numbertext">2 / 4</div>
+    <div class="numbertext">2 / 4<b> Overview</b></div>
     <img src="Pikachu Project/pikachuStep04.jpg" style="width:100%">
   </div>
 
   <div class="overview-slides">
-    <div class="numbertext">3 / 4</div>
+    <div class="numbertext">3 / 4<b> Overview</b></div>
     <img src="Pikachu Project/pikachuStep08.jpg" style="width:100%">
   </div>
 
   <div class="overview-slides">
-    <div class="numbertext">4 / 4</div>
+    <div class="numbertext">4 / 4<b> Overview</b></div>
     <img src="Pikachu Project/pikachuStep11-2.jpg" style="width:100%">
   </div>
 
@@ -146,29 +147,36 @@
       <th> User Rating: 4.1/5</th>
       <th> Paper Requirement: 7in x 7in</th>
     </tr>
-  </table>
-</div>
-
-
-<div id="numberNav" class="borderTest">
-  <table id="navTable">
     <tr>
-      <th class="numbersteps"> <a href="#step1"> 1 </a> </th>
-      <th class="numbersteps"> <a href="#step2"> 2 </a> </th>
-      <th class="numbersteps"> <a href="#step3"> 3 </a> </th>
-      <th class="numbersteps"> <a href="#step4"> 4 </a> </th>
-      <th class="numbersteps"> <a href="#step5"> 5 </a> </th>
-      <th class="numbersteps"> <a href="#step6"> 6 </a> </th>
-      <th class="numbersteps"> <a href="#step7"> 7 </a> </th>
-      <th class="numbersteps"> <a href="#step8"> 8 </a> </th>
-      <th class="numbersteps"> <a href="#step9"> 9 </a> </th>
-      <th class="numbersteps"> <a href="#step10"> 10 </a> </th>
+      <th> <a class = "bookmark" href="saved.html">
+        Bookmark</a></th>
+      <th> <a class = "create-this-now" href="#step1">
+        Create This Now!</a></th>
     </tr>
   </table>
 </div>
 
+<div id = "tutorial-section-divider">
+</div>
+  <h1 id = "tutorial-section">Tutorial Section</h1>
+
+<!--Testing New Numberbar-->
+<div id="numberNav">
+  <a class = "numbersteps-button" href="#step1"> 1 </a>
+  <a class = "numbersteps-button" href="#step2"> 2 </a>
+  <a class = "numbersteps-button" href="#step3"> 3 </a>
+  <a class = "numbersteps-button" href="#step4"> 4 </a>
+  <a class = "numbersteps-button" href="#step5"> 5 </a>
+  <a class = "numbersteps-button" href="#step6"> 6 </a>
+  <a class = "numbersteps-button" href="#step7"> 7 </a>
+  <a class = "numbersteps-button" href="#step8"> 8 </a>
+  <a class = "numbersteps-button" href="#step9"> 9 </a>
+  <a class = "numbersteps-button" href="#step10"> 10 </a>
+
+</div>
 <div id="mainSteps" class="borderTest">
-  <div id="step1" class="borderTest align">
+  <span class="clicked-numberstep" id="step1"></span>
+  <div class="borderTest align">
     <h1> STEP ONE </h1>
     <h2> There will be instructions here </h2>
     <table>
@@ -177,9 +185,25 @@
       </tr>
     </table>
 <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/UECvfrFuWdk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<!-- Help button-->
+<!-- Trigger/Open The Help Modal -->
+  <button id="helpButton"><b>?<b></button>
+  <!-- The Help Modal -->
+  <div id="helpModal" class="help-modal">
+
+    <!--Help Modal content -->
+    <div class="help-modal-content">
+      <span class="help-close">&times;</span>
+      <p><img src="http://wisemindstudios.com/wp-content/uploads/origami-folds-origami-folds-best-25-origami-folding-ideas-on-pinterest-origami.png" alt="OrigamiFolds" height="800" ></p>
+    </div>
+  </div>
+  <!--top page button-->
+     <button onclick="topFunction()" id="toppagebtn"
+      title="Go to top">Top</button>
   </div>
   <hr class="star-bright" id="nameline"></hr>
-  <div id="step2" class="borderTest align">
+  <span class="clicked-numberstep" id="step2"></span>
+  <div  class="borderTest align">
     <h1> STEP TWO </h1>
     <h2> There will be instructions here </h2>
     <table>
@@ -192,7 +216,8 @@
     <!iframe src="" id="video"><!/iframe>
   </div>
   <hr class="star-bright" id="nameline"></hr>
-  <div id="step3" class="borderTest align">
+  <span class="clicked-numberstep" id="step3"></span>
+  <div class="borderTest align">
     <h1> STEP THREE </h1>
     <h2> There will be instructions here </h2>
     <table>
@@ -203,7 +228,8 @@
     <iframe width="560" height="315" src="https://www.youtube.com/embed/UECvfrFuWdk?start=115" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
   <hr class="star-bright" id="nameline"></hr>
-  <div id="step4" class="borderTest align">
+  <span class="clicked-numberstep" id="step4"></span>
+  <div class="borderTest align">
     <h1> STEP FOUR </h1>
     <h2> There will be instructions here </h2>
     <table>
@@ -214,7 +240,8 @@
     <iframe width="560" height="315" src="https://www.youtube.com/embed/UECvfrFuWdk?start=230" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
   <hr class="star-bright" id="nameline"></hr>
-  <div id="step5" class="borderTest align">
+  <span class="clicked-numberstep" id="step5"></span>
+  <div class="borderTest align">
     <h1> STEP FIVE </h1>
     <h2> There will be instructions here </h2>
     <table>
@@ -227,7 +254,8 @@
     <iframe width="560" height="315" src="https://www.youtube.com/embed/UECvfrFuWdk?start=273" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
   <hr class="star-bright" id="nameline"></hr>
-  <div id="step6" class="borderTest align">
+  <span class="clicked-numberstep" id="step6"></span>
+  <div class="borderTest align">
     <h1> STEP SIX </h1>
     <h2> There will be instructions here </h2>
     <table>
@@ -240,7 +268,8 @@
     <iframe width="560" height="315" src="https://www.youtube.com/embed/UECvfrFuWdk?start=330" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
   <hr class="star-bright" id="nameline"></hr>
-  <div id="step7" class="borderTest align">
+  <span class="clicked-numberstep" id="step7"></span>
+  <div class="borderTest align">
     <h1> STEP SEVEN </h1>
     <h2> There will be instructions here </h2>
     <table>
@@ -251,7 +280,8 @@
     <iframe width="560" height="315" src="https://www.youtube.com/embed/UECvfrFuWdk?start=397" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
   <hr class="star-bright" id="nameline"></hr>
-  <div id="step8" class="borderTest align">
+  <span class="clicked-numberstep" id="step8"></span>
+  <div class="borderTest align">
     <h1> STEP EIGHT </h1>
     <h2> There will be instructions here </h2>
     <table>
@@ -262,7 +292,8 @@
     <iframe width="560" height="315" src="https://www.youtube.com/embed/UECvfrFuWdk?start=457" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
   <hr class="star-bright" id="nameline"></hr>
-  <div id="step9" class="borderTest align">
+  <span class="clicked-numberstep" id="step9"></span>
+  <div class="borderTest align">
     <h1> STEP NINE </h1>
     <h2> There will be instructions here </h2>
     <table>
@@ -274,7 +305,8 @@
     src="https://www.youtube.com/embed/UECvfrFuWdk?start=507" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope";
   </div>
   <hr class="star-bright" id="nameline"></hr>
-  <div id="step10" class="borderTest align">
+  <span class="clicked-numberstep" id="step10"></span>
+  <div class="borderTest align">
     <h1> STEP TEN </h1>
     <h2> There will be instructions here </h2>
     <table>
@@ -287,7 +319,8 @@
     src="https://www.youtube.com/embed/UECvfrFuWdk?start=507" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;picture-in-picture" allowfullscreen></iframe>
   </div>
   <hr class="star-bright" id="nameline"></hr>
-  <div id="step10" class="borderTest align">
+  <span class="clicked-numberstep" id="step10"></span>
+  <div class="borderTest align">
     <h1> STEP TEN </h1>
     <h2> There will be instructions here </h2>
     <table>
@@ -299,19 +332,7 @@
     <iframe width="560" height="315"
     src="https://www.youtube.com/embed/UECvfrFuWdk?start=607" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;picture-in-picture" allowfullscreen></iframe>
   </div>
-  <!-- Help button-->
-  <!-- Trigger/Open The Help Modal -->
-    <button id="helpButton"><b>?<b></button>
-    <!-- The Help Modal -->
-    <div id="helpModal" class="help-modal">
 
-      <!--Help Modal content -->
-      <div class="help-modal-content">
-        <span class="help-close">&times;</span>
-        <p><img src="http://wisemindstudios.com/wp-content/uploads/origami-folds-origami-folds-best-25-origami-folding-ideas-on-pinterest-origami.png" alt="OrigamiFolds" height="800" ></p>
-      </div>
-
-    </div>
 </div>
 
 <script>
@@ -401,12 +422,28 @@ function myFunction() {
 }
 
 //Scroll Bar for Steps
-//window.onscroll = function() {myFunction2() };
+window.onscroll = function() {myFunction2() };
 function myFunction2() {
   var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
   var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
   var scrolled = (winScroll / height) * 100;
   document.getElementById("navTable").style.width = scrolled + "%";
+}
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        document.getElementById("toppagebtn").style.display = "block";
+    } else {
+        document.getElementById("toppagebtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 }
 </script>
 </html>
