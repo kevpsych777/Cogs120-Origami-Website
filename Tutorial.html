@@ -161,7 +161,7 @@
   <h1 id = "tutorial-section">Tutorial Section</h1>
 
 <!--Testing New Numberbar-->
-<div id="numberNav">
+<div id="numberNav" class = "sticky-stepsbar">
   <a class = "numbersteps-button" href="#step1"> 1 </a>
   <a class = "numbersteps-button" href="#step2"> 2 </a>
   <a class = "numbersteps-button" href="#step3"> 3 </a>
@@ -409,17 +409,6 @@ window.onclick = function(event) {
 }
 // End of help button
 
-// Sticky Nav bar js
-window.onscroll = function() {myFunction() };
-var numberNav = document.getElementById("numberNav");
-var sticky = numberNav.offsetTop;
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    numberNav.classList.add("sticky")
-  } else {
-    numberNav.classList.remove("sticky");
-  }
-}
 
 //Scroll Bar for Steps
 window.onscroll = function() {myFunction2() };
