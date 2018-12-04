@@ -51,7 +51,7 @@ a:active {
   display: inline;
 }
 .menubarbackground {
-  background-color: lightgray;
+  background-color: #6B7A8F;
   position: fixed;
   height: 70px; /* Full-height: remove this if you want "auto" height */
   width: 100%; /* Set the width of the sidebar */
@@ -61,7 +61,7 @@ a:active {
   box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 }
 .searchbutton {
-  background-color: #fff;
+  background-color: #B0AAA2;
   border-width: 1px;
   font-family: Montserrat;
 }
@@ -93,7 +93,7 @@ a:active {
   float: left;
   z-index: 0; /* Stay on top */
   left: 0;
-  background-color: #999; /* Black */
+  background-color: #DCC7AA; /* Black */
   overflow-x: hidden; /* Disable horizontal scroll */
   overflow-y: hidden; /* Disable horizontal scroll */
   color: #000;
@@ -114,16 +114,10 @@ a:active {
 .sidebar-content a:hover {
   color: #f1f1f1;
 }
-/*.background-image{
-  background-image: url("https://st.depositphotos.com/2492641/3320/v/950/depositphotos_33202273-stock-illustration-abstract-polygon-background-3d-colorful.jpg");
-  background-color: #cccccc;
-  height: 500px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  position: relative;
+.background-image {
+  background-color: #DCC7AA;
 }
-*/
+
 .recommended {
   /*margin-left: 20%;*/ /* Same as the width of the sidenav */
   display: relative;
@@ -185,12 +179,16 @@ a:active {
 #sorting {
   padding-top: 80px;
   font-size: 30px;
-  text-decoration: underline;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
   margin: auto;
 }
 
 #tags {
   font-size: 25px;
+  font-weight: bold;
+  font-variant: small-caps;
   margin: 0px;
 }
 
@@ -211,18 +209,22 @@ a:active {
 }
 #rating{
     font-size: 25px;
-    text-decoration: underline;
+    clear: both;
+    font-variant: small-caps;
+    font-weight: bold;
     margin: auto;
 }
 #difficulty {
   font-size: 25px;
-  text-decoration: underline;
+  font-variant: small-caps;
+  font-weight: bold;
   margin: auto;
 }
 
 #ETC {
   font-size: 25px;
-  text-decoration: underline;
+  font-variant: small-caps;
+  font-weight: bold;
   margin: auto;
 }
 
@@ -251,7 +253,7 @@ input[type=text], input[type=password] {
 
 /* Set a style for all buttons */
 #loginbutton {
-    background-color: #49d049;
+    background-color: #F7882F;
     color: white;
     padding: 12px 18px;
     margin: 8px 0;
@@ -267,7 +269,7 @@ input[type=text], input[type=password] {
 }
 
 #loginbutton:hover {
-    background-color: #4CAF50;
+    background-color: #F27D1F;
 
 }
 #loginbutton2 {
@@ -409,20 +411,19 @@ input[type=text]:focus, input[type=password]:focus {
 
 /* Set a style for all buttons */
 #signupbutton1 {
-    background-color: #49d049;
+    background-color: #F7882F;
     color: white;
     padding: 12px 18px;
     margin: 8px 0;
     border: none;
     cursor: pointer;
     width: 100%;
-    opacity: 0.9;
     font-family: Montserrat;
     font-size: 14pt;
 }
 
 #signupbutton1:hover {
-     background-color:#4CAF50;
+     background-color:#F27D1F;
 }
 #signupbutton2 {
     background-color: #49d049;
@@ -531,11 +532,11 @@ input[type=text]:focus, input[type=password]:focus {
   cursor: pointer;
 }
 .btn:hover {
-  background-color: #ddd;
+  background-color: #FCAA68;
 }
 
 .btn.active {
-  background-color: #666;
+  background-color: #E3873D;
   color: Black;
 }
 
