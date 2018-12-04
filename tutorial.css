@@ -13,6 +13,7 @@ html {
   box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 
 }
+
 .headerText {
   display: inline;
   padding-left: 1%; /*~20px for a 1920x1080*/
@@ -25,10 +26,10 @@ html {
   position: fixed;
   width: 100%;
   z-index:2;
+  top:0px;
+  left: 0px;
 
 }
-
-
 .nav-link {
   padding-left: 1%;
   display: inline;
@@ -352,13 +353,28 @@ a {
     position: sticky;
     top: 70px;
 }
+.sticky-video{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 132px;
+}
+#video {
+  float: right;
+  margin-top:40px;
+    border: 1px solid;
+}
 .clicked-numberstep{
    display:block;
    height:70px; /* this is the height of your header */
    margin-top:-70px; /* this is again negative value of the height of your header */
    visibility:hidden;
 }
-
+.step-one-title{
+  padding-top:10px;
+}
+.instructions-content{
+  width:500px;
+}
 #navbar img{
   width: 100%;
 }
@@ -437,13 +453,6 @@ a {
   background: #ccc;
 }
 
-#video {
-  float: right;
-  margin-top: -25%;
-  margin-right: 5%;
-
-}
-
 .star-bright
 hr.star-dark {
   margin: 40px auto 30px;
@@ -456,7 +465,7 @@ hr.star-dark {
 }
 
 .align {
-  padding-left: 10%;
+  padding-left: 4%;
 }
 
 .round {
@@ -512,12 +521,6 @@ hr.star-dark {
   padding-top: 4%;
 }
 
-#nav-bar {/*Remove this Later. It is messing up the Menu bar*/
-  width: 30%;
-  position: absolute;
-  right: 50px;
-
-}
 
 .features {
   display: table;
