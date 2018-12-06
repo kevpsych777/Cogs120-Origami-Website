@@ -358,10 +358,15 @@ a {
     position: sticky;
     top: 132px;
 }
+.sticky-help{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 252px;
+}
 #video {
   float: right;
   margin-top:40px;
-    border: 1px solid;
+  border: 1px solid;
 }
 .clicked-numberstep{
    display:block;
@@ -371,9 +376,6 @@ a {
 }
 .step-one-title{
   padding-top:10px;
-}
-.instructions-content{
-  width:500px;
 }
 #navbar img{
   width: 100%;
@@ -443,10 +445,6 @@ a {
 #mainSteps{
   top:0;
 }
-#mainInfo {
-  float: left;
-}
-
 
 #navTable {
   width: 100%;
@@ -712,6 +710,17 @@ img {
 }
 
 /*Help Button*/
+#helpButton{
+  background-color: #a0a0a0;
+  color: white;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  float: right;
+  clear: right;
+  margin:  150px 10px 0 10px;
+}
 /* The help-Modal (background) */
 .help-modal {
     display: none; /* Hidden by default */
@@ -733,7 +742,7 @@ img {
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
+    width: 35%;
 }
 
 /* The Help Close Button */
@@ -772,12 +781,3 @@ img {
   background-color: #555;
 }
 /*End of Top page button*/
-#helpButton{
-  background-color: #a0a0a0;
-  color: white;
-  padding: 12px 18px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
