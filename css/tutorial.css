@@ -1,6 +1,19 @@
 html {
   font-family: Montserrat;
 }
+
+.menubarbackground {
+  background-color: lightgray;
+  position: fixed;
+  height: 70px; /* Full-height: remove this if you want "auto" height */
+  width: 100%; /* Set the width of the sidebar */
+  top: 0; /* Stay at the top */
+  left: 0;
+  z-index: -10;
+  box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+
+}
+
 .headerText {
   display: inline;
   padding-left: 1%; /*~20px for a 1920x1080*/
@@ -13,23 +26,13 @@ html {
   position: fixed;
   width: 100%;
   z-index:2;
+  top:0px;
+  left: 0px;
 
 }
-
 .nav-link {
   padding-left: 1%;
   display: inline;
-
-}
-.menubarbackground {
-  background-color: lightgray;
-  position: fixed;
-  height: 70px; /* Full-height: remove this if you want "auto" height */
-  width: 100%; /* Set the width of the sidebar */
-  top: 0; /* Stay at the top */
-  left: 0;
-  z-index: -10;
-  box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 
 }
 .searchbutton {
@@ -40,6 +43,11 @@ html {
 }
 #savedmenubar {
   padding-right: 20px;
+}
+header {
+  width: 100%;
+  background-color: #fff;
+  color: #000;
 }
 
 .sidebar {
@@ -55,11 +63,6 @@ html {
   color: #000;
 }
 
-header {
-  width: 100%;
-  background-color: #fff;
-  color: #000;
-}
 #loginbutton {
   background-color: #49d049;
   color: white;
@@ -316,12 +319,6 @@ a {
 }
 
 
-.headerText {
-  display: inline-block;
-  padding-left: 20px;
-  z-index:2;
-}
-
 .smallimg {
   padding-right: 20px;
 }
@@ -329,16 +326,13 @@ a {
 
 /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
 
-.borderTest {
-  border-style: none;
-  border-width: 1px;
-}
+
 /*old*/
 #navbar {
   height: 100%; /* Full-height: remove this if you want "auto" height */
   width: 5%; /* Set the width of the sidebar */
   position: fixed;
-  \: 1; /* Stay on top */
+  top: 1; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 0; /* left justify */
   background-color: #fff; /* Red */
@@ -346,8 +340,51 @@ a {
   padding-top: 20px;
   color: #000;
 }
-.numbersteps {
+
+.numbersteps-button{
+  float:left;
   width: 10%;
+  border-style: solid;
+  text-align: center;
+  background-color: #f4f4f4; /* Red */
+}
+.sticky-stepsbar{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 70px;
+}
+.sticky-video{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 132px;
+}
+.sticky-help{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 252px;
+}
+#video {
+  float: right;
+  margin-top:40px;
+  border: 1px solid;
+}
+.clicked-numberstep{
+   display:block;
+   height:70px; /* this is the height of your header */
+   margin-top:-70px; /* this is again negative value of the height of your header */
+   visibility:hidden;
+}
+.instruction-content{
+  width: 50%;
+}
+.instruction-image{
+  width:100%;
+}
+.image-bound{
+  width:auto;
+}
+.step-one-title{
+  padding-top:10px;
 }
 #navbar img{
   width: 100%;
@@ -365,36 +402,57 @@ a {
 }
 
 #gallery {
-  width: 50%;
   float: left;
+  width: 50%;
 }
 
 #info {
- float: right;
- float: top;
- position: relative;
- bottom:300px;
- font-family: Montserrat;
- display: inline;
-
+   float: left;
+   font-family: Montserrat;
+   display: inline;
+   padding-top:125px;
+   padding-left:150px;
 }
 
 #origamiInfo {
+  float: left;
   font-family: Montserrat;
   text-align: left;
-  width: 100%;
-  border-style: none;
+  border-style: solid;
+  border-width: 1px;
   border-collapse: separate;
   border-spacing: 50px;
 }
-
-#mainInfo {
-  float: left;
+.bookmark{
+  background-color: #a0a0a0;
+  color: white;
+  padding: 12px 18px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
+.create-this-now{
+  background-color: #a0a0a0;
+  color: white;
+  padding: 12px 50px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#tutorial-section{
+  margin-top:0;
+  padding-left: 25px;;
+}
+#tutorial-section-divider{
+  clear: both;
+  width: 100%;
+  padding: 30px;
 
-#navTable th {
-  border-style: solid;
-  border-width: 1px;
+}
+#mainSteps{
+  top:0;
 }
 
 #navTable {
@@ -402,41 +460,20 @@ a {
   background: #ccc;
 }
 
-#video {
-  float: right;
-  margin-top: -25%;
-  margin-right: 5%;
-
-}
-#help {
-  float: right;
-  margin-right: 3%;
-  margin-top: -5%;
-  font-size: 1.5px;
-}
-.sticky {
-  position: fixed;
-  top: 10%;
-  width: 100%;
-}
-
-.sticky + .content {
-  padding-top: 60px;
-}
-
-.star-bright
-hr.star-dark {
-  margin: 40px auto 30px;
+.steps-divider {
   padding: 0;
   max-width: 80%;
   border: 0;
-  border-top: solid 3px;
-  text-align: center;
+  border-top: solid 1px gray;
+  left: 0px;
+  width: 50%;
   color: #000;
+  margin:0px;
+  margin-left: 10px;
 }
 
 .align {
-  padding-left: 10%;
+  padding-left: 4%;
 }
 
 .round {
@@ -447,7 +484,8 @@ hr.star-dark {
 }
 
 .formField {
-  padding-left: 35%;
+  /*styling for the search input bar*/
+  padding-left: 450px;
 }
 
 .centered {
@@ -491,12 +529,6 @@ hr.star-dark {
   padding-top: 4%;
 }
 
-#nav-bar {/*Remove this Later. It is messing up the Menu bar*/
-  width: 30%;
-  position: absolute;
-  right: 50px;
-
-}
 
 .features {
   display: table;
@@ -599,11 +631,12 @@ img {
 
 /* Position the image container (needed to position the left and right arrows) */
 .slideshow-container {
+  float: left;
   position: relative;
-  width: 50%;
-  top:100px;
+  width: 500px;
+  top:80px;
+  padding-left:80px;
   z-index:1;
-  padding-left:50px;
 }
 
 /* Hide the images by default */
@@ -687,6 +720,17 @@ img {
 }
 
 /*Help Button*/
+#helpButton{
+  background-color: #a0a0a0;
+  color: white;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  float: right;
+  clear: right;
+  margin:  150px 10px 0 10px;
+}
 /* The help-Modal (background) */
 .help-modal {
     display: none; /* Hidden by default */
@@ -708,7 +752,7 @@ img {
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
+    width: 35%;
 }
 
 /* The Help Close Button */
@@ -726,3 +770,24 @@ img {
     cursor: pointer;
 }
 /*End of Help CSS*/
+/*Top page Button*/
+#toppagebtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#toppagebtn:hover {
+  background-color: #555;
+}
+/*End of Top page button*/
