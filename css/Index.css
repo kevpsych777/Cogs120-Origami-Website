@@ -51,7 +51,7 @@ a:active {
   display: inline;
 }
 .menubarbackground {
-  background-color: #6B7A8F;
+  background-color: lightgray;
   position: fixed;
   height: 70px; /* Full-height: remove this if you want "auto" height */
   width: 100%; /* Set the width of the sidebar */
@@ -61,7 +61,7 @@ a:active {
   box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 }
 .searchbutton {
-  background-color: #B0AAA2;
+  background-color: #fff;
   border-width: 1px;
   font-family: Montserrat;
 }
@@ -93,7 +93,7 @@ a:active {
   float: left;
   z-index: 0; /* Stay on top */
   left: 0;
-  background-color: #DCC7AA; /* Black */
+  background-color: #999; /* Black */
   overflow-x: hidden; /* Disable horizontal scroll */
   overflow-y: hidden; /* Disable horizontal scroll */
   color: #000;
@@ -115,7 +115,7 @@ a:active {
   color: #f1f1f1;
 }
 .background-image {
-  background-color: #DCC7AA;
+  background-color: white;
 }
 
 .recommended {
@@ -253,7 +253,7 @@ input[type=text], input[type=password] {
 
 /* Set a style for all buttons */
 #loginbutton {
-    background-color: #F7882F;
+    background-color: #49d049;
     color: white;
     padding: 12px 18px;
     margin: 8px 0;
@@ -269,7 +269,7 @@ input[type=text], input[type=password] {
 }
 
 #loginbutton:hover {
-    background-color: #F27D1F;
+    background-color: #4caf50;
 
 }
 #loginbutton2 {
@@ -411,7 +411,7 @@ input[type=text]:focus, input[type=password]:focus {
 
 /* Set a style for all buttons */
 #signupbutton1 {
-    background-color: #F7882F;
+    background-color: #49d049;
     color: white;
     padding: 12px 18px;
     margin: 8px 0;
@@ -423,7 +423,7 @@ input[type=text]:focus, input[type=password]:focus {
 }
 
 #signupbutton1:hover {
-     background-color:#F27D1F;
+     background-color:#4caf50;
 }
 #signupbutton2 {
     background-color: #49d049;
@@ -532,11 +532,11 @@ input[type=text]:focus, input[type=password]:focus {
   cursor: pointer;
 }
 .btn:hover {
-  background-color: #FCAA68;
+  background-color: gray;
 }
 
 .btn.active {
-  background-color: #E3873D;
+  background-color: gray;
   color: Black;
 }
 
