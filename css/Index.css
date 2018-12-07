@@ -33,9 +33,10 @@ a:active {
 }
 .headerText {
   display: inline;
-
+  padding-left: 1%; /*~20px for a 1920x1080*/
   top: 0.5%;
   font-size: 14pt;
+  z-index: 2;
 }
 .menubar {
   position: fixed;
@@ -43,14 +44,14 @@ a:active {
 }
 .formField {
   /*styling for the search input bar*/
-  padding-left: 40%;
+  padding-left: 450px;
 }
 .nav-link {
   padding-left: 1%;
   display: inline;
 }
 .menubarbackground {
-  background-color: lightgray;
+  background-color: #6B7A8F;
   position: fixed;
   height: 70px; /* Full-height: remove this if you want "auto" height */
   width: 100%; /* Set the width of the sidebar */
@@ -60,7 +61,7 @@ a:active {
   box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 }
 .searchbutton {
-  background-color: #fff;
+  background-color: #B0AAA2;
   border-width: 1px;
   font-family: Montserrat;
 }
@@ -86,20 +87,21 @@ a:active {
   color: #f1f1f1;
 }
 
-.sidebar {
-  height: 1600px; /* Full-height: remove this if you want "auto" height */
-  width: 200px; /* Set the width of the sidebar */
+.sidebar-background {
+  height: 2200px; /* Full-height: remove this if you want "auto" height */
+  width: 210px; /* Set the width of the sidebar */
   float: left;
   z-index: 0; /* Stay on top */
-  margin-top: 5%; /* Stay at the top */
   left: 0;
-  background-color: #999; /* Black */
+  background-color: #DCC7AA; /* Black */
   overflow-x: hidden; /* Disable horizontal scroll */
   overflow-y: hidden; /* Disable horizontal scroll */
   color: #000;
 }
-
-.sidebar a {
+.sidebar-content{
+  padding-left: 10px;
+}
+.sidebar-content a {
   /*Adjusts the main sidebar tab*/
   margin-left: 6.67%;
   padding: 0px 0px 10px 0px;
@@ -109,43 +111,45 @@ a:active {
   display: inline;
 }
 
-.sidebar a:hover {
+.sidebar-content a:hover {
   color: #f1f1f1;
+}
+.background-image {
+  background-color: #DCC7AA;
 }
 
 .recommended {
   /*margin-left: 20%;*/ /* Same as the width of the sidenav */
   display: relative;
-  float: right;
-
+  float: left;
   font-size: 28px; /* Increased text to enable scrolling */
-  padding-top: 100px;
-  height: 100%;
+  margin-left: 50px;
+  height: 800px;
   width: 75%;
   border: 1px solid;
   overflow-x: hidden; /* Disable horizontal scroll */
 }
 .recent {
   /*margin-left: 20%;*/ /* Same as the width of the sidenav */
-  float: right;
+  float: left;
   font-size: 28px; /* Increased text to enable scrolling */
-  padding-top: 20px;
-  height: 100%;
+  margin-left: 50px;
+  height: 800px;
   width: 75%;
   border: 1px solid;
   overflow-x: hidden; /* Disable horizontal scroll */
 }
 
 .gallery {
-  margin: 4%;
-  border: 3px solid #ccc;
+  margin: 0px 50px 100px 50px;
+  border: 2px solid #ccc;
   float: left;
-  height: 25%;
-  width: 20%;
+  height: 200px;
+  width: 200px;
 }
 
 .gallery:hover {
-  border: 3px solid #777;
+  border: 2px solid #ccc;
 }
 
 .gallery img {
@@ -154,24 +158,37 @@ a:active {
 }
 
 .desc {
-  border: 1px solid #777;
-  padding: 15px;
+  border: 2px solid #ccc;
+  padding: 16px;
   text-align: left;
   font-size: 60%;
   background-color: white;
 }
+.zoom {
+    transition: transform .3s;
+}
 
+.zoom:hover {
+    -ms-transform: scale(1.3); /* IE 9 */
+    -webkit-transform: scale(1.3); /* Safari 3-8 */
+    transform: scale(1.3);
+}
 #header-img {
   padding-bottom: 1.5%;
 }
 #sorting {
+  padding-top: 80px;
   font-size: 30px;
-  text-decoration: underline;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
   margin: auto;
 }
 
 #tags {
   font-size: 25px;
+  font-weight: bold;
+  font-variant: small-caps;
   margin: 0px;
 }
 
@@ -192,18 +209,22 @@ a:active {
 }
 #rating{
     font-size: 25px;
-    text-decoration: underline;
+    clear: both;
+    font-variant: small-caps;
+    font-weight: bold;
     margin: auto;
 }
 #difficulty {
   font-size: 25px;
-  text-decoration: underline;
+  font-variant: small-caps;
+  font-weight: bold;
   margin: auto;
 }
 
 #ETC {
   font-size: 25px;
-  text-decoration: underline;
+  font-variant: small-caps;
+  font-weight: bold;
   margin: auto;
 }
 
@@ -232,9 +253,9 @@ input[type=text], input[type=password] {
 
 /* Set a style for all buttons */
 #loginbutton {
-    background-color: #49d049;
+    background-color: #F7882F;
     color: white;
-    padding: 14px 20px;
+    padding: 12px 18px;
     margin: 8px 0;
     border: none;
     cursor: pointer;
@@ -248,7 +269,7 @@ input[type=text], input[type=password] {
 }
 
 #loginbutton:hover {
-    background-color: #4CAF50;
+    background-color: #F27D1F;
 
 }
 #loginbutton2 {
@@ -294,22 +315,17 @@ img.avatar {
 .container {
     padding: 40px 16px 0px 16px;
 }
-#recommended #recent{
-    padding-bottom: 0px;
+#recommended {
+    padding-bottom:0px;
+}
+#recent {
+    margin-top:0px;
 }
 span.psw {
     float: right;
     padding-top: 16px;
 }
-.zoom {
-    transition: transform .5s;
-}
 
-.zoom:hover {
-    -ms-transform: scale(1.3); /* IE 9 */
-    -webkit-transform: scale(1.3); /* Safari 3-8 */
-    transform: scale(1.3);
-}
 
 /* The Modal (background) */
 .modal {
@@ -395,20 +411,19 @@ input[type=text]:focus, input[type=password]:focus {
 
 /* Set a style for all buttons */
 #signupbutton1 {
-    background-color: #49d049;
+    background-color: #F7882F;
     color: white;
-    padding: 14px 20px;
+    padding: 12px 18px;
     margin: 8px 0;
     border: none;
     cursor: pointer;
     width: 100%;
-    opacity: 0.9;
     font-family: Montserrat;
     font-size: 14pt;
 }
 
 #signupbutton1:hover {
-     background-color:#4CAF50;
+     background-color:#F27D1F;
 }
 #signupbutton2 {
     background-color: #49d049;
@@ -517,11 +532,11 @@ input[type=text]:focus, input[type=password]:focus {
   cursor: pointer;
 }
 .btn:hover {
-  background-color: #ddd;
+  background-color: #FCAA68;
 }
 
 .btn.active {
-  background-color: #666;
+  background-color: #E3873D;
   color: Black;
 }
 
@@ -553,3 +568,24 @@ input[type=text]:focus, input[type=password]:focus {
 .stars label:hover {
     transform: scale(1.3);
 }
+/*Top page Button*/
+#toppagebtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#toppagebtn:hover {
+  background-color: #555;
+}
+/*End of Top page button*/

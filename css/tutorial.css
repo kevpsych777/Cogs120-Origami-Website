@@ -5,7 +5,7 @@ html {
 .menubarbackground {
   background-color: lightgray;
   position: fixed;
-  height: 10%; /* Full-height: remove this if you want "auto" height */
+  height: 70px; /* Full-height: remove this if you want "auto" height */
   width: 100%; /* Set the width of the sidebar */
   top: 0; /* Stay at the top */
   left: 0;
@@ -13,6 +13,7 @@ html {
   box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 
 }
+
 .headerText {
   display: inline;
   padding-left: 1%; /*~20px for a 1920x1080*/
@@ -25,9 +26,10 @@ html {
   position: fixed;
   width: 100%;
   z-index:2;
+  top:0px;
+  left: 0px;
 
 }
-
 .nav-link {
   padding-left: 1%;
   display: inline;
@@ -346,13 +348,44 @@ a {
   text-align: center;
   background-color: #f4f4f4; /* Red */
 }
+.sticky-stepsbar{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 70px;
+}
+.sticky-video{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 132px;
+}
+.sticky-help{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 252px;
+}
+#video {
+  float: right;
+  margin-top:40px;
+  border: 1px solid;
+}
 .clicked-numberstep{
    display:block;
    height:70px; /* this is the height of your header */
    margin-top:-70px; /* this is again negative value of the height of your header */
    visibility:hidden;
 }
-
+.instruction-content{
+  width: 50%;
+}
+.instruction-image{
+  width:100%;
+}
+.image-bound{
+  width:auto;
+}
+.step-one-title{
+  padding-top:10px;
+}
 #navbar img{
   width: 100%;
 }
@@ -421,46 +454,26 @@ a {
 #mainSteps{
   top:0;
 }
-#mainInfo {
-  float: left;
-}
-
 
 #navTable {
   width: 100%;
   background: #ccc;
 }
 
-#video {
-  float: right;
-  margin-top: -25%;
-  margin-right: 5%;
-
-}
-
-.sticky {
-  position: fixed;
-  top: 10%;
-  width: 100%;
-}
-
-.sticky + .content {
-  padding-top: 60px;
-}
-
-.star-bright
-hr.star-dark {
-  margin: 40px auto 30px;
+.steps-divider {
   padding: 0;
   max-width: 80%;
   border: 0;
-  border-top: solid 3px;
-  text-align: center;
+  border-top: solid 1px gray;
+  left: 0px;
+  width: 50%;
   color: #000;
+  margin:0px;
+  margin-left: 10px;
 }
 
 .align {
-  padding-left: 10%;
+  padding-left: 4%;
 }
 
 .round {
@@ -471,7 +484,8 @@ hr.star-dark {
 }
 
 .formField {
-  padding-left: 35%;
+  /*styling for the search input bar*/
+  padding-left: 450px;
 }
 
 .centered {
@@ -515,12 +529,6 @@ hr.star-dark {
   padding-top: 4%;
 }
 
-#nav-bar {/*Remove this Later. It is messing up the Menu bar*/
-  width: 30%;
-  position: absolute;
-  right: 50px;
-
-}
 
 .features {
   display: table;
@@ -712,6 +720,17 @@ img {
 }
 
 /*Help Button*/
+#helpButton{
+  background-color: #a0a0a0;
+  color: white;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  float: right;
+  clear: right;
+  margin:  150px 10px 0 10px;
+}
 /* The help-Modal (background) */
 .help-modal {
     display: none; /* Hidden by default */
@@ -733,7 +752,7 @@ img {
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
+    width: 35%;
 }
 
 /* The Help Close Button */
@@ -772,12 +791,3 @@ img {
   background-color: #555;
 }
 /*End of Top page button*/
-#helpButton{
-  background-color: #a0a0a0;
-  color: white;
-  padding: 12px 18px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
