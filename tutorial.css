@@ -374,6 +374,15 @@ a {
    margin-top:-70px; /* this is again negative value of the height of your header */
    visibility:hidden;
 }
+.instruction-content{
+  width: 50%;
+}
+.instruction-image{
+  width:100%;
+}
+.image-bound{
+  width:auto;
+}
 .step-one-title{
   padding-top:10px;
 }
@@ -451,15 +460,16 @@ a {
   background: #ccc;
 }
 
-.star-bright
-hr.star-dark {
-  margin: 40px auto 30px;
+.steps-divider {
   padding: 0;
   max-width: 80%;
   border: 0;
-  border-top: solid 3px;
-  text-align: center;
+  border-top: solid 1px gray;
+  left: 0px;
+  width: 50%;
   color: #000;
+  margin:0px;
+  margin-left: 10px;
 }
 
 .align {
